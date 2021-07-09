@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="20dp"
+        android:background="#4f0404"
+        >
+
+        <TextView
+            android:layout_margin="5dp"
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="40dp"
+
+
+            />
+        <TextView
+            android:id="@+id/tvNumber"
+            android:textColor="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="987456321"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvName"
+            android:layout_marginLeft="40dp"
+
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
