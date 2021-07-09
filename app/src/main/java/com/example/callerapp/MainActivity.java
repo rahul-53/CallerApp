@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ItemClickListener {
 
      ArrayList<CallerAppModel> callerAppModels = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -42,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews(){
         recyclerView=findViewById(R.id.recycleView);
+    }
+
+    public void onItemClicked(CallerAppModel model, int position){
+
+        Intent intent = new  Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("987654321"));
+        startActivity(intent);
     }
 
 }

@@ -11,9 +11,11 @@ import java.util.ArrayList;
 
 public class CallerAppAdapter extends RecyclerView.Adapter<CallerAppViewHolder> {
     private ArrayList<CallerAppModel>callerAppModels;
+    private ItemClickListener itemClickListener;
 
-    public CallerAppAdapter(ArrayList<CallerAppModel> callerAppModels, MainActivity mainActivity) {
+    public CallerAppAdapter(ArrayList<CallerAppModel> callerAppModels, ItemClickListener itemClickListener) {
         this.callerAppModels=callerAppModels;
+        this.itemClickListener=itemClickListener;
     }
 
 
@@ -21,7 +23,7 @@ public class CallerAppAdapter extends RecyclerView.Adapter<CallerAppViewHolder> 
     @Override
     public CallerAppViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_layout, parent,false);
-        return new CallerAppViewHolder(view);
+        return new CallerAppViewHolder(view, itemClickListener);
     }
 
     @Override
